@@ -1,0 +1,18 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class WeekModel extends Model
+{
+    use HasFactory;
+    protected $table = 'week';
+    static function getrecords(){
+        return WeekModel::get();
+    }
+    static function getWeekusingName($week_name){
+        return WeekModel::where('name','=',$week_name)->first();
+    }
+}
