@@ -1,0 +1,258 @@
+/* Login Page Styling */
+.login-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 20px;
+}
+
+.login-right-wrap {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.login-right-wrap h1 {
+    color: #3a4a6d;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.login-right-wrap h2 {
+    color: #4a6baf;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #4a5568;
+}
+
+.login-danger {
+    color: #e53e3e;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px 12px 40px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.3s;
+    background-color: #f8fafc;
+}
+
+.form-control:focus {
+    border-color: #4a6baf;
+    box-shadow: 0 0 0 3px rgba(74, 107, 175, 0.2);
+    outline: none;
+    background-color: white;
+}
+
+.profile-views {
+    position: absolute;
+    left: 15px;
+    top: 38px;
+    color: #a0aec0;
+}
+
+.toggle-password {
+    cursor: pointer;
+    right: 15px;
+    left: auto;
+}
+
+.invalid-feedback {
+    color: #e53e3e;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.is-invalid {
+    border-color: #e53e3e !important;
+}
+
+.forgotpass {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.remember-me {
+    color: #4a5568;
+    font-size: 14px;
+}
+
+.custom_check {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.custom_check input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+}
+
+.custom_check:hover input ~ .checkmark {
+    background-color: #edf2f7;
+}
+
+.custom_check input:checked ~ .checkmark {
+    background-color: #4a6baf;
+    border-color: #4a6baf;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.custom_check input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.custom_check .checkmark:after {
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.forgotpass a {
+    color: #4a6baf;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.forgotpass a:hover {
+    color: #3a4a6d;
+    text-decoration: underline;
+}
+
+.btn-primary {
+    background-color: #4a6baf;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: white;
+    width: 100%;
+}
+
+.btn-primary:hover {
+    background-color: #3a4a6d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(74, 107, 175, 0.2);
+}
+
+.login-or {
+    position: relative;
+    margin: 25px 0;
+    text-align: center;
+}
+
+.or-line {
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: #e2e8f0;
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+}
+
+.span-or {
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    background-color: white;
+    padding: 0 15px;
+    color: #a0aec0;
+    font-size: 14px;
+}
+
+.social-login {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-login a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f8fafc;
+    color: #4a5568;
+    transition: all 0.3s;
+}
+
+.social-login a:hover {
+    background-color: #4a6baf;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 576px) {
+    .login-right-wrap {
+        padding: 30px 20px;
+    }
+    
+    .login-right-wrap h1 {
+        font-size: 24px;
+    }
+    
+    .login-right-wrap h2 {
+        font-size: 20px;
+    }
+}

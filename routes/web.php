@@ -34,7 +34,7 @@ use App\Http\Controllers\CalenderController;
 
 
 
-Route::get('/',[AuthController::class,'login'])->name('auth/login');
+Route::get('/login',[AuthController::class,'login'])->name('auth/login');
 Route::post('/login',[AuthController::class,'authlogin'])->name('authlogin');
 Route::get('/logout',[AuthController::class,'logout'])->name('logout');
 Route::get('/forgot',[AuthController::class,'forgotpassword'])->name('forgot');
@@ -143,7 +143,7 @@ Route::get('admin/parent/assign_student_parent_delete/{student_id}',[ParentContr
 });
 Route::group(['middleware' => 'teacher'],function(){
     Route::get('teacher/dashboard',[DashController::class,'dashboard']);
-    //teacheraccount 
+    //teacheraccount
     Route::get('teacher/account',[UserController::class,'myAccount']);
     Route::post('teacher/account',[UserController::class,'UpdatemyAccountTeacher']);
     // Change Password

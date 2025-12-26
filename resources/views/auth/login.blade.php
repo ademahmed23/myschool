@@ -1,13 +1,11 @@
-@extends('layouts.app')
-@section('content')
 {{-- message --}}
-{!! Toastr::message() !!}
+
+<link rel="stylesheet" href="{{ asset('dist/css/login.css') }}">
 <div class="login-right">
     <div class="login-right-wrap">
-        <h1>ODA-Special Boarding School</h1>
-        <p class="account-subtitle">Need an account? <a href="{{ route('register') }}">Sign Up</a></p>
+        <h1>Haramaya University Model School</h1>
         <h2>Sign in</h2>
-        <form action="{{ route('login') }}" method="POST">
+        <form action="{{ route('authlogin') }}" method="post">
             @csrf
             <div class="form-group">
                 <label>Email<span class="login-danger">*</span></label>
@@ -46,4 +44,3 @@
     </div>
 </div>
 
-@endsection

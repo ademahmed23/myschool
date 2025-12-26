@@ -192,18 +192,18 @@ $request = self::select('users.*','class.name as class_name')
             ->where('users.parent_id', '=', $parent_id)
            ->where('users.is_delete','=',0)
 
-          //  if(!empty(Request :: get('id'))){
-               /* $request = $request->where('users.id','=',Request::get('id').'%');
-            }
-            if(!empty(Request :: get('name'))){
-                $request = $request->where('users.name','like','%'.Request::get('name').'%');
-            }
-            if (!empty(Request::get('last_name'))){
-                $request = $request->where('users.last_name','like','%'. Request::get('last_name') .'%');
-            }
-            if (!empty(Request::get('email'))){
-                $request = $request->where('users.email','like','%'. Request::get('email') .'%');
-            }*/
+        //   //  if(!empty(Request :: get('id'))){
+        //        /* $request = $request->where('users.id','=',Request::get('id').'%');
+        //     }
+        //     if(!empty(Request :: get('name'))){
+        //         $request = $request->where('users.name','like','%'.Request::get('name').'%');
+        //     }
+        //     if (!empty(Request::get('last_name'))){
+        //         $request = $request->where('users.last_name','like','%'. Request::get('last_name') .'%');
+        //     }
+        //     if (!empty(Request::get('email'))){
+        //         $request = $request->where('users.email','like','%'. Request::get('email') .'%');
+        //     }*/
           
             ->orderBy('id', 'desc')
             ->get();
